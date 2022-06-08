@@ -9,8 +9,7 @@ Before we can start with the generation, we have to setup the project and instal
 * Start by extracting the content of the .zip file that also contains this readme.md somewhere on your computer. We will refer to the extraction directory as **project_path**.
 * Navigate into the  **project_path**
 
-* Download and unzip the weights for robust model trained with TRADES in the l2-ball of radius 0.25 from [here](https://www.dropbox.com/s/3hj2mwrgtv42as7/0_25_l2.pth) into **project_path**/FundusModels/robust/
-* Download and unzip the weights for plain model fine-tuned for 3 epochs robustly in the l2-ball of radius 0.01 from [here](https://www.dropbox.com/s/9it0oyico0r3l0y/ft_ep_3.pth) into **project_path**/FundusModels/plain/
+* Download and unzip the weights for robust model trained with TRADES in the l2-ball of radius 0.25 and plain model from [here](https://www.dropbox.com/s/b6oyf4yzfohml0c/FundusModels.zip) into your **project_path**
 
 * Create a new conda env via `conda env create -f python_38_svces_lite.yml`
 * Activate the conda environment via `conda activate python_38_dvces`
