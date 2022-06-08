@@ -1,6 +1,6 @@
 # **Fundus Visual Counterfactual Explanations**
 
-Welcome to the codebase for our MICCAI submission *Visual explanations for the detection of diabetic retinopathy from retinal fundus images.* We will show you how to generate VCEs on the selected fundus images used in the paper with the ensemble of robust and plain models. 
+Welcome to the codebase for our MICCAI submission *Visual explanations for the detection of diabetic retinopathy from retinal fundus images.* We will show you how to generate VCEs together with their respective T-VCMs @ threshold *0.96* on the selected fundus images used in the paper with the ensemble of robust and plain models. 
 
 ## Setup
 
