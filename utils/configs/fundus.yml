@@ -1,0 +1,12 @@
+sampling:
+  batch_size: 100 # 25 for randomized smoothin, 100 otherwise
+  model_description:
+    folder: 'AdvACET_24-02-2020_14:41:39'
+
+data:
+  dataset: "fundusKaggle" # oa-imagenet, ImageNet1000
+  dataset_for_scorenet: 'fundusKaggle'
+  class_labels: ['healthy(0)', 'malignant(1,2,3,4)']
+  image_size: 224 # 224 for CLIP
+
+
