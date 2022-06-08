@@ -34,6 +34,9 @@ For any of the proposed parameter settings, feel free to adjust the values, but 
   and then again execute the **starting command** 
 
 * Important arguments:
-The batchsize argument `--bs` is the number of samples per gpu, so if you encounter out-of-memory errors you can reduce it without altering results.
+    - The batchsize argument `--bs` is the number of samples per gpu, so if you encounter out-of-memory errors you can reduce it without altering results.
+    - The number of images argument `--num_imgs` should be greater or equal to the batchsize
+    - The norm of the VCEs `--norm`
+    - The radius of the VCEs `--eps_project`
     
 The resulting images can be found in `FundusVCEs/examples/`.
