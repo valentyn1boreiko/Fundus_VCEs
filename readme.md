@@ -33,6 +33,7 @@ For any of the proposed parameter settings, feel free to adjust the values, but 
   `seeds=(1);classifier_t=29;second_classifier_type=-1;bs=12;nim=12;gpu=1;eps_project=6;norm='L2'`
   and then again execute the **starting command** 
 
+* Important arguments:
 The batchsize argument `--bs` is the number of samples per gpu, so if you encounter out-of-memory errors you can reduce it without altering results.
-
+    
 The resulting images can be found in `FundusVCEs/examples/`.
