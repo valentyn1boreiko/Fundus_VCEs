@@ -2,7 +2,6 @@ import torch
 import torch.nn.functional as F
 from utils_svces.adversarial_attacks import PGD, MonotonePGD, APGDAttack, ArgminPGD, UniformNoiseGenerator,\
     NormalNoiseGenerator, L2FABAttack, LinfFABAttack, CutoutPGD
-#from blended_diffusion.optimization import DiffusionAttack
 from utils_svces.distances import LPDistance
 from torch.nn.modules.batchnorm import _BatchNorm
 from utils_svces.get_config import get_config
