@@ -1,12 +1,7 @@
 import os
-from functools import partial
-
 from PIL import Image, ImageOps
 import matplotlib.colors as mcolors
-import timm
 
-from blended_diffusion.utils_blended.model_normalization import ResizeAndMeanWrapper
-from utils_svces.model_normalization import ImageNetWrapper
 from utils_svces.load_trained_model import load_model as load_model_ratio
 try:
     from main import ask_overwrite_folder
@@ -21,8 +16,7 @@ from utils_svces.config import pretty, get_NVAE_MSE, get_NVAE_class_model, model
     Evaluator_model_names_cifar10, Evaluator_model_names_imagenet1000, descr_args_generate, descr_args_rst_stab, \
     loader_all, temperature_scaling_dl_dict, Evaluator_model_names_funduskaggle, Evaluator_model_names_oct, \
     full_dataset_dict
-#from .GAN_metric import compute_score_raw
-from .config import Evaluator_FID_base_path  # Evaluator_FID_dict,
+from .config import Evaluator_FID_base_path
 import pickle
 import json
 import numpy as np
@@ -30,9 +24,7 @@ import torchvision.transforms as transforms
 from .config import FIDDataset, Evaluator_model_names_dict
 from tqdm import tqdm
 from robustbench import load_model as load_model_benchmark
-from utils_svces.model_normalization import IdentityWrapper, NormalizationWrapper
-#import robust_finetuning.data as data_rf
-#import robust_finetuning.eval as utils_eval
+from utils_svces.model_normalization import IdentityWrapper
 
 interpolation_to_int ={"nearest":1,
      "bilinear":2,
@@ -198,27 +190,7 @@ class Evaluator(object):
             elif 'ViT' in model_name:
                 descr_args['device'] = device
                 load_model_final = models_dict[model_name]
-            elif 'timm' in type_:
-                # ImageNet models used, with respective normalization
-                model_name = type_.split(',')[1]
-                print('timm model used is', model_name)
-                #load_model_final = lambda **kwargs: ImageNetWrapper(timm.create_model(**kwargs))
-                load_model_final = lambda **kwargs: timm.create_model(**kwargs)
-                cfg = timm.create_model(model_name, pretrained=True).default_cfg
-                assert cfg['input_size'][1] == cfg['input_size'][2]
-                print('loading cfg from timm', cfg)
-                prewrapper = partial(ResizeAndMeanWrapper,
-                                     size=cfg['input_size'][1],
-                                     interpolation=interpolation_to_int[cfg['interpolation']],
-                                     mean=torch.tensor(cfg['mean']),
-                                     std=torch.tensor(cfg['std'])
-                                     )
-                normalization_prewrapper = partial(NormalizationWrapper,
-                                     mean=torch.tensor(cfg['mean']),
-                                     std=torch.tensor(cfg['std'])
-                                     )
 
-                descr_args['model_name'] = model_name
             elif model_name == 'ResNet50IN1000':
                 load_model_final = models_dict[model_name]
             else:

@@ -1,6 +1,5 @@
 from .apgd import APGDAttack
 from .fab import L1FABAttack, L2FABAttack, LinfFABAttack
-from .afw import AFWAttack
 from .argmin_pgd import ArgminPGD
 from .fgm import FGM
 from .cutout_pgd import CutoutPGD
