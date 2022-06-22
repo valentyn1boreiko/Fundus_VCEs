@@ -18,8 +18,6 @@ from cnn_visualizations.misc_functions import (preprocess_image,
                             create_saliency_map)
 from cnn_visualizations.integrated_gradients import IntegratedGradients
 from cnn_visualizations.guided_backprop_ensemble import GuidedBackprop
-# from utils.model_normalization import FundusKaggleWrapper_clahe_v2_new_qual_eval
-# from utils.models.models_224x224.resnet_224 import resnet50 as imagenet_resnet50
 
 if __name__ == '__main__':
     hps = get_arguments()
