@@ -39,3 +39,20 @@ For any of the proposed parameter settings, feel free to adjust the values, but 
     - The radius of the VCEs `--eps_project`
     
 The resulting images can be found in `FundusVCEs/examples/`.
+
+## Generating saliency maps using Integrated Gradients and Guided Backpropagation
+
+* Generating saliency maps for an ensemble of adversarially robust and plain models
+  `classifier_t=27;second_classifier_type=29`
+  and then execute
+  `python fundus_saliency_maps.py --classifier_type $classifier_t --second_classifier_type $second_classifier_type` 
+* Generating saliency maps for an adversarially robust model only
+  `classifier_t=27;second_classifier_type=-1`
+  and then execute
+  `python fundus_saliency_maps.py --classifier_type $classifier_t --second_classifier_type $second_classifier_type`
+* Generating saliency maps for a plain model only
+  `classifier_t=29;second_classifier_type=-1`
+  and then execute
+  `python fundus_saliency_maps.py --classifier_type $classifier_t --second_classifier_type $second_classifier_type`
+  
+The resulting images can be found in `FundusSaliencyMaps/`.
