@@ -1,6 +1,15 @@
 # **Fundus Visual Counterfactual Explanations**
 
-Welcome to the codebase for our MICCAI paper *Visual explanations for the detection of diabetic retinopathy from retinal fundus images.* We will show you how to generate **VCEs** together with their respective **T-VCMs** @ threshold 0.96 on the selected fundus images used in the paper with the ensemble of robust and plain models. 
+Welcome to the codebase for our MICCAI paper *Visual explanations for the detection of diabetic retinopathy from retinal fundus images.* We will show you how to generate **VCEs** together with their respective **T-VCMs** @ threshold 0.96 on the selected fundus images used in the paper with the ensemble of robust and plain models.
+
+## Examples of the l4 VCEs for IDRiD (https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid) image generated with the proposed ensemble of plain and robust models and combined into the video
+
+Here, we transform one originally sick (DR) image into the DR and then - into the healthy class.
+
+https://user-images.githubusercontent.com/11149793/175532247-7b8924d4-b258-47c4-9b83-b5ba3252eaab.mp4
+
+https://user-images.githubusercontent.com/11149793/175532096-f9680eb4-c2d2-4560-a3bf-d1dd6eddb0dc.mp4
+
 
 ## Setup
 
