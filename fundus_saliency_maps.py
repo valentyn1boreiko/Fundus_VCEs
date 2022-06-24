@@ -65,7 +65,7 @@ if __name__ == '__main__':
         vis_type_to_cls = {'integrated_gradients': IntegratedGradients, 'guided_backprop': GuidedBackprop}
         for vis_type in vis_type_to_cls.keys():
             filename = f'{result_folder}/{vis_type}_{file_name_to_export}'
-            if hps.second_classifier_type != -1: 
+            if hps.second_classifier_type == -1: 
                 saliency_map_generator = vis_type_to_cls[vis_type](model.cpu(), model.cpu())
                 saliency_map = create_saliency_map(saliency_map_generator, tensors, target_class)
                 save_gradient_images(original_image, saliency_map, mask_img, filename)
