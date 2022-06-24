@@ -12,7 +12,7 @@ Before we can start with the generation, we have to setup the project and instal
 * Download and unzip the weights for robust model trained with TRADES in the l2-ball of radius 0.25 and plain model from [here](https://www.dropbox.com/s/b6oyf4yzfohml0c/FundusModels.zip) into your **project_path**
 
 * Create a new conda env via `conda env create -f python_38_svces_lite.yml`
-* Activate the conda environment via `conda activate python_38_dvces`
+* Activate the conda environment via `conda activate python_38_fundus_vces`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
 
 ## Creating  DVCEs/SVCEs/blended diffusion based VCEs
