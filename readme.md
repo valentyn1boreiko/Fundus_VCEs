@@ -17,7 +17,7 @@ Before we can start with the generation, we have to setup the project and instal
 
 ## Creating  VCEs
 
-In the following, we show, how to first set the parameters, and then - generate VCEs of the respective type for 2 selected targets (sick and healthy). To choose your own image ids and targets, change `some_vces`.
+In the following, we show, how to first set the parameters, and then - generate VCEs of the respective type for 2 selected targets (sick and healthy). To choose your own image ids and targets, change `some_vces` dictionary.
 
 For any of the proposed parameter settings, feel free to adjust the values, but these are the ones we have used mostly in the paper.
 
